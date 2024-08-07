@@ -7,9 +7,7 @@ function App() {
     <>
       <TopNav />
       <div>
-        <h1 className="text-3xl font-bold underline">
-          <div>Vite Tailwind</div>
-        </h1>
+        <h1 className="text-3xl font-bold underline">Vite Tailwind</h1>
       </div>
     </>
   );
