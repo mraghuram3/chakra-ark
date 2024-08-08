@@ -1,0 +1,48 @@
+.app {
+  display: grid;
+  grid-template-rows: auto 1fr;
+  height: 100%;
+  width: 100%;
+}
+
+.content {
+  display: grid;
+  grid-template-columns: auto 1fr;
+}
+
+.leftNav {
+  display: grid;
+  gap: var(--kf-space-12);
+  min-width: 220px;
+  padding: var(--kf-space-24);
+
+  border-right: 1px solid var(--kf-color-gray-200);
+  height: 100%;
+  grid-auto-rows: min-content;
+}
+
+.leftNavItem {
+  cursor: pointer;
+  padding: var(--kf-space-20) var(--kf-space-8);
+}
+
+.leftNavItem:hover,
+.leftNavItem[data-active="true"] {
+  background: var(--kf-color-primary-100);
+  color: var(--kf-color-primary-500);
+}
+
+.route {
+  display: grid;
+  padding: var(--kf-space-20);
+  gap: var(--kf-space-12);
+  grid-template-rows: auto 1fr;
+}
+
+.breadcrumb {
+  display: flex;
+  min-height: 50px;
+  align-items: center;
+  justify-self: start;
+  gap: var(--kf-space-8);
+}

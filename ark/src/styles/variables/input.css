@@ -1,0 +1,54 @@
+/* stylelint-disable unit-disallowed-list */
+
+body {
+  --kf-input-border-top-left-radius: 4px;
+  --kf-input-border-top-right-radius: 4px;
+  --kf-input-border-bottom-right-radius: 4px;
+  --kf-input-border-bottom-left-radius: 4px;
+
+  --kf-input-border-left-width: 1px;
+  --kf-input-border-right-width: 1px;
+  --kf-input-border-top-width: 1px;
+  --kf-input-border-bottom-width: 1px;
+
+  --kf-input-focus-border-left-width: 1px;
+  --kf-input-focus-border-right-width: 1px;
+  --kf-input-focus-border-top-width: 1px;
+  --kf-input-focus-border-bottom-width: 1px;
+
+  --kf-input-readonly-border-left-width: 0;
+  --kf-input-readonly-border-right-width: 0;
+  --kf-input-readonly-border-top-width: 0;
+  --kf-input-readonly-border-bottom-width: 0;
+
+  --kf-input-disabled-border-left-width: 0;
+  --kf-input-disabled-border-right-width: 0;
+  --kf-input-disabled-border-top-width: 0;
+  --kf-input-disabled-border-bottom-width: 0;
+
+  --kf-input-error-border-left-width: 1px;
+  --kf-input-error-border-right-width: 1px;
+  --kf-input-error-border-top-width: 1px;
+  --kf-input-error-border-bottom-width: 1px;
+
+  --kf-input-font-size: var(--kf-font-size-14);
+
+  --kf-input-font-weight: var(--kf-font-weight-medium);
+  --kf-input-line-height: var(--kf-line-height-base);
+  --kf-input-letter-spacing: var(--kf-letter-spacing-base);
+
+  --kf-input-padding-top: 0.6rem;
+  --kf-input-padding-right: 0.8rem;
+  --kf-input-padding-bottom: 0.6rem;
+  --kf-input-padding-left: 0.8rem;
+
+  --kf-input-label-text-size: var(--kf-font-size-12);
+  --kf-input-label-text-gap: var(--kf-space-4);
+  --kf-input-help-text-size: var(--kf-font-size-12);
+  --kf-input-help-text-gap: var(--kf-space-4);
+
+  --kf-input-shadow: none;
+  --kf-input-focus-shadow: none;
+
+  --kf-input-icon-size: 16px;
+}

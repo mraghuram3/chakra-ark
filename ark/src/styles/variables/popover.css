@@ -1,0 +1,22 @@
+body {
+  --kf-popover-padding-top: var(--kf-space-4);
+  --kf-popover-padding-right: 0;
+  --kf-popover-padding-bottom: var(--kf-space-4);
+  --kf-popover-padding-left: 0;
+
+  --kf-popover-border-left-width: 0;
+  --kf-popover-border-right-width: 0;
+  --kf-popover-border-top-width: 0;
+  --kf-popover-border-bottom-width: 0;
+
+  --kf-popover-shadow: var(--kf-shadow-300);
+
+  --kf-popover-itemdivider-weight: 0;
+
+  --kf-popover-item-padding-top: var(--kf-space-8);
+  --kf-popover-item-padding-right: var(--kf-space-16);
+  --kf-popover-item-padding-bottom: var(--kf-space-8);
+  --kf-popover-item-padding-left: var(--kf-space-16);
+
+  --kf-popover-item-selected-icon-color: var(--kf-color-secondary-one-500);
+}

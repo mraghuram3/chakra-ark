@@ -1,0 +1,20 @@
+:root {
+  /* spaces */
+  --kf-space-2: 0.2rem;
+  --kf-space-4: 0.4rem;
+  --kf-space-6: 0.6rem;
+  --kf-space-8: 0.8rem;
+  --kf-space-10: 1rem;
+  --kf-space-12: 1.2rem;
+  --kf-space-16: 1.6rem;
+  --kf-space-18: 1.8rem;
+  --kf-space-20: 2rem;
+  --kf-space-24: 2.4rem;
+  --kf-space-28: 2.8rem;
+  --kf-space-32: 3.2rem;
+  --kf-space-36: 3.6rem;
+  --kf-space-40: 4rem;
+  --kf-space-48: 4.8rem;
+  --kf-space-60: 6rem;
+  --kf-space-72: 7.2rem;
+}

@@ -1,0 +1,17 @@
+body {
+  --kf-datasheet-border-top-left-radius: 0;
+  --kf-datasheet-border-top-right-radius: 0;
+  --kf-datasheet-border-bottom-right-radius: 0;
+  --kf-datasheet-border-bottom-left-radius: 0;
+
+  --kf-datasheet-border-left-width: 0;
+  --kf-datasheet-border-right-width: 0;
+  --kf-datasheet-border-top-width: 0;
+  --kf-datasheet-border-bottom-width: 0;
+
+  --kf-datasheet-padding-top: 0;
+  --kf-datasheet-padding-right: 0;
+  --kf-datasheet-padding-bottom: 0;
+  --kf-datasheet-padding-left: 0;
+  --kf-datasheet-shadow: none;
+}

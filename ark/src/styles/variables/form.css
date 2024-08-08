@@ -1,0 +1,17 @@
+body {
+  --kf-form-border-top-left-radius: 0;
+  --kf-form-border-top-right-radius: 0;
+  --kf-form-border-bottom-right-radius: 0;
+  --kf-form-border-bottom-left-radius: 0;
+
+  --kf-form-border-left-width: 0;
+  --kf-form-border-right-width: 0;
+  --kf-form-border-top-width: 0;
+  --kf-form-border-bottom-width: 0;
+
+  --kf-form-padding-top: 0;
+  --kf-form-padding-right: 0;
+  --kf-form-padding-bottom: 0;
+  --kf-form-padding-left: 0;
+  --kf-form-shadow: none;
+}

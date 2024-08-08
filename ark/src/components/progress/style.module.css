@@ -1,0 +1,18 @@
+.progressContainer {
+}
+
+.progressTrack {
+  background: var(--kf-color-gray-400);
+  height: 10px;
+  width: 100%;
+  position: relative;
+  border-radius: 8px;
+}
+
+.progressRange {
+  background: var(--kf-color-primary-500);
+  height: 10px;
+  width: 100%;
+  position: relative;
+  border-radius: 8px;
+}

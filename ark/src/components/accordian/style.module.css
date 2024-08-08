@@ -1,0 +1,23 @@
+
+.accordianItem{
+    border-bottom: 1px solid var(--kf-color-gray-300);
+}
+
+.accordianItemTrigger{
+    background: none;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: none;
+    width: 100%;
+    border: none;
+}
+
+.accordianItemIndicator[data-state="open"]{
+    transform: rotate(180deg);
+}
+
+/* data-[state=closed]:animate-accordion-up data-[state=open]:animate-accordion-down */
+.accordianItemContent{
+    overflow: hidden;
+}

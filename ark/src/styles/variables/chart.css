@@ -1,0 +1,17 @@
+body {
+  --kf-chart-border-top-left-radius: 0;
+  --kf-chart-border-top-right-radius: 0;
+  --kf-chart-border-bottom-right-radius: 0;
+  --kf-chart-border-bottom-left-radius: 0;
+
+  --kf-chart-border-left-width: 0;
+  --kf-chart-border-right-width: 0;
+  --kf-chart-border-top-width: 0;
+  --kf-chart-border-bottom-width: 0;
+
+  --kf-chart-padding-top: 0;
+  --kf-chart-padding-right: 0;
+  --kf-chart-padding-bottom: 0;
+  --kf-chart-padding-left: 0;
+  --kf-chart-shadow: none;
+}
