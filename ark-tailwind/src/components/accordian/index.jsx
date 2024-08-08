@@ -1,32 +1,65 @@
+import * as React from "react";
 import { ChevronDownIcon } from "lucide-react";
-import { Accordion } from "@ark-ui/react";
+import { Accordion as AccordionPrimitive } from "@ark-ui/react";
 
 import { cn } from "../../lib/utils";
 
-export const AccordionComp = ({ className }) => {
-  return (
-    <Accordion.Root
-      defaultValue={["React"]}
-      className={cn("border-b", className)}
+const Accordion = AccordionPrimitive.Root;
+
+const AccordionItem = React.forwardRef(({ className, ...props }, ref) => (
+  <AccordionPrimitive.Item
+    ref={ref}
+    className={cn("border-b", className)}
+    {...props}
+  />
+));
+AccordionItem.displayName = AccordionPrimitive.Item.displayName;
+
+const AccordionItemTrigger = React.forwardRef(
+  ({ className, children, ...props }, ref) => (
+    <AccordionPrimitive.ItemTrigger
+      ref={ref}
+      className={cn(
+        "base-600 flex w-full items-center justify-between py-4 font-medium transition-all",
+        className
+      )}
+      {...props}
     >
-      {["React", "Solid", "Vue"].map((item) => (
-        <Accordion.Item key={item} value={item} className="">
-          <Accordion.ItemTrigger
-            className={cn(
-              "base-600 flex flex-1 items-center justify-between py-4 font-medium transition-all [&[data-state=open]>svg]:rotate-180",
-              className
-            )}
-          >
-            What is {item}?
-            <Accordion.ItemIndicator>
-              <ChevronDownIcon />
-            </Accordion.ItemIndicator>
-          </Accordion.ItemTrigger>
-          <Accordion.ItemContent className="small overflow-hidden transition-all data-[state=closed]:animate-accordion-up data-[state=open]:animate-accordion-down">
-            {item} is a JavaScript library for building user interfaces.
-          </Accordion.ItemContent>
-        </Accordion.Item>
-      ))}
-    </Accordion.Root>
-  );
-};
+      {children}
+    </AccordionPrimitive.ItemTrigger>
+  )
+);
+AccordionItemTrigger.displayName = AccordionPrimitive.ItemTrigger.displayName;
+
+const AccordionItemIndicator = React.forwardRef(
+  ({ className, children, ...props }, ref) => (
+    <AccordionPrimitive.ItemIndicator
+      ref={ref}
+      className={`transition-all [&[data-state=open]>svg]:rotate-180 ${className}`}
+      {...props}
+    >
+      {children ? children : <ChevronDownIcon />}
+    </AccordionPrimitive.ItemIndicator>
+  )
+);
+
+AccordionItemIndicator.displayName =
+  AccordionPrimitive.ItemIndicator.displayName;
+
+const AccordionItemContent = React.forwardRef(
+  ({ className, children, ...props }, ref) => (
+    <AccordionPrimitive.ItemContent
+      ref={ref}
+      className="small overflow-hidden transition-all data-[state=closed]:animate-accordion-up data-[state=open]:animate-accordion-down"
+      {...props}
+    >
+      <div className={cn("pt-0 pb-4", className)}>{children}</div>
+    </AccordionPrimitive.ItemContent>
+  )
+);
+
+AccordionItemContent.displayName = AccordionPrimitive.ItemContent.displayName;
+
+export {
+    Accordion, AccordionItem, AccordionItemIndicator, AccordionItemTrigger, AccordionItemContent 
+}
