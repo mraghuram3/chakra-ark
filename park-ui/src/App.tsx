@@ -1,16 +1,26 @@
-import { useState } from 'react';
-import { Button } from "~/components/ui/button";
-import './App.css'
+import { Switch, Route, Link, useLocation } from "react-router-dom";
+
+import { TopNav } from "./topnav.jsx";
+
+
+import { ButtonPage } from "./pages/button"
+
+
+
+import '../styled-system/styles.css'
+
+import "./App.css";
 
 function App() {
-
   return (
-    <div>
+    <div className="App">
+      <TopNav />
+      <div>
         Main App
-        <Button>Test button</Button>
-
+        <ButtonPage />
+      </div>
     </div>
-  )
+  );
 }
 
-export default App
+export default App;
