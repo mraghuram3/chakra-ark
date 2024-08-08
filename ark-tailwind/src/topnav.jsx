@@ -48,6 +48,7 @@ export function TopNav() {
       document.getElementsByTagName("HTML")[0].setAttribute("dir", "ltr");
       setRtlChecked(false);
     }
+    window.location.reload();
   };
 
   return (
