@@ -13,7 +13,8 @@ export const ProgressPage = () => {
 
 export const ProgressComp = () => {
   return (
-    <div className="flex  flex-1 justify-center">
+    <div className="grid">
+      <div className="small">Default</div>
       <Progress value={80} />
     </div>
   );
@@ -21,7 +22,8 @@ export const ProgressComp = () => {
 
 export const ProgressComp2 = () => {
   return (
-    <div className="flex flex-1 justify-center">
+    <div className="grid">
+      <div className="small">Custom</div>
       <Progress
         value={30}
         trackClassName="bg-primary-300"

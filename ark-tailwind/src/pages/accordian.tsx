@@ -10,7 +10,7 @@ import { AlertTriangle } from "lucide-react";
 
 export const AccordianPage = () => {
   return (
-    <div>
+    <div className="grid justify-center">
       <AccordionComp />
       <AccordionComp2 />
     </div>
@@ -19,7 +19,8 @@ export const AccordianPage = () => {
 
 export const AccordionComp = () => {
   return (
-    <div className="flex w-full flex-1 justify-center">
+    <div className="grid">
+      <div className="small">Default</div>
       <Accordion defaultValue={["React"]} multiple>
         {["React", "Solid", "Vue"].map((item) => (
           <AccordionItem key={item} value={item}>
@@ -39,7 +40,8 @@ export const AccordionComp = () => {
 
 export const AccordionComp2 = () => {
   return (
-    <div className="flex w-full flex-1 justify-center">
+    <div className="grid">
+      <div className="small">custom</div>
       <Accordion defaultValue={["React"]} multiple>
         {["React", "Solid", "Vue"].map((item) => (
           <AccordionItem key={item} value={item}>
