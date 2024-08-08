@@ -7,7 +7,9 @@ import { LocaleProvider } from "@ark-ui/react";
 import App from "./App.tsx";
 import "./index.css";
 
-const isRtl = localStorage.getItem("dir") !== "ltr";
+const dir = localStorage.getItem("dir") || "ltr";
+
+const isRtl = dir !== "ltr";
 
 
 ReactDOM.createRoot(document.getElementById("root")!).render(
