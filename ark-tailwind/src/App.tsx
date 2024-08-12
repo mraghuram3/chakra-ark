@@ -1,28 +1,33 @@
-import { Switch, Route, Link, useLocation } from "react-router-dom";
-
+import {
+  Switch,
+  Route,
+  Router,
+  Link,
+  useLocation,
+  useHistory,
+} from "react-router-dom";
 
 import { TopNav } from "./topnav.jsx";
 
 import { AccordianPage } from "./pages/accordian";
+import { MultiSelectPage, SelectPage } from "./pages/select";
 import { ProgressPage } from "./pages/progress";
 import { ButtonPage } from "./pages/button";
 import { Home } from "./pages/home";
 
-
 import "./App.css";
-
 
 const ROUTES = [
   {
     Name: "Home",
     Path: "/home",
     Component: Home,
-    Exact: true
+    Exact: true,
   },
   {
     Name: "Accordion",
     Path: "/accordion",
-    Component: AccordianPage
+    Component: AccordianPage,
   },
   // {
   //   Name: "Alert",
@@ -32,7 +37,7 @@ const ROUTES = [
   {
     Name: "Button",
     Path: "/button",
-    Component: ButtonPage
+    Component: ButtonPage,
   },
   // {
   //   Name: "Input",
@@ -42,7 +47,17 @@ const ROUTES = [
   {
     Name: "Progress",
     Path: "/progress",
-    Component: ProgressPage
+    Component: ProgressPage,
+  },
+  {
+    Name: "Single Select",
+    Path: "/select",
+    Component: SelectPage,
+  },
+  {
+    Name: "Multi Select",
+    Path: "/multiselect",
+    Component: MultiSelectPage,
   },
   // {
   //   Name: "Slider",
@@ -53,6 +68,8 @@ const ROUTES = [
 
 function App() {
   const location = useLocation();
+  const history = useHistory();
+
   return (
     <>
       <TopNav />
@@ -70,18 +87,20 @@ function App() {
           ))}
         </aside>
         <main className="flex flex-1 flex-col bg-bg-overlay-white px-20">
-          <Switch>
-            {ROUTES.map(({ Name, Path, Component, Exact }) => (
-              <Route key={Name} path={Path} exact={Exact}>
-                <label className="base-600 flex min-h-[50px] w-full items-center gap-8 self-start">
-                  <p>Components</p>
-                  <span>{">"}</span>
-                  <p>{Name}</p>
-                </label>
-                <Component />
-              </Route>
-            ))}
-          </Switch>
+          <Router history={history}>
+            <Switch>
+              {ROUTES.map(({ Name, Path, Component, Exact }) => (
+                <Route key={Name} path={Path} exact={Exact}>
+                  <label className="base-600 flex min-h-[50px] w-full items-center gap-8 self-start">
+                    <p>Components</p>
+                    <span>{">"}</span>
+                    <p>{Name}</p>
+                  </label>
+                  <Component />
+                </Route>
+              ))}
+            </Switch>
+          </Router>
         </main>
       </div>
     </>

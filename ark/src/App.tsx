@@ -3,6 +3,7 @@ import { Switch, Route, Link, useLocation } from "react-router-dom";
 import { TopNav } from "./topnav.jsx";
 
 import { AccordianPage } from "./pages/accordian";
+import { MultiSelectPage, SelectPage } from "./pages/select";
 import { ProgressPage } from "./pages/progress";
 import { ButtonPage } from "./pages/button";
 import { Home } from "./pages/home";
@@ -40,6 +41,16 @@ const ROUTES = [
     Name: "Progress",
     Path: "/progress",
     Component: ProgressPage,
+  },
+  {
+    Name: "Single Select",
+    Path: "/select",
+    Component: SelectPage,
+  },
+  {
+    Name: "Multi Select",
+    Path: "/multiselect",
+    Component: MultiSelectPage,
   },
   // {
   //   Name: "Slider",

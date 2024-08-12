@@ -1,0 +1,38 @@
+.content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.customTrack {
+  background: var(--kf-color-primary-300);
+}
+
+.customRange {
+  background: var(--kf-color-secondary-three-500);
+}
+
+.buttonParent,
+.progressParent {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.buttonContent {
+  display: grid;
+  grid-auto-flow: column;
+  grid-column-gap: 100px;
+}
+
+.buttonSize,
+.buttonVariant {
+  display: grid;
+  gap: var(--kf-space-24);
+}
+
+.progressContent {
+  min-width: 300px;
+  display: grid;
+}
